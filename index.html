@@ -1,51 +1,52 @@
-
 <!doctype html>
 <html>
+
 <head>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Hacker Rank Progress</title>
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<title>Hacker Rank Progress</title>
+	<link rel="stylesheet" href="css/style.css">
 	<script src="libs/Chart.min.js"></script>
 	<script src="libs/utils.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h2 class="heading">Hacker Rank Progress Report</h2>
-        <div class="chart">
-            <canvas id="canvas"></canvas>
-        </div>
-    </div>
-    
+	<div class="container">
+		<h2 class="heading">Hacker Rank Progress Report</h2>
+		<div class="chart">
+			<canvas id="canvas"></canvas>
+		</div>
+	</div>
+
 	<script>
 		var config = {
 			type: 'line',
 			data: {
 				labels: [
-					'13 Oct, 19', 
+					'13 Oct, 19',
 					'14 Oct, 19',
 					'15 Oct, 19',
 					'16 Oct, 19',
-					'17 Oct, 19', 
-'18 Oct, 19'
+					'17 Oct, 19',
+					'18 Oct, 19',
+					'19 Oct, 19'
 				],
 				datasets: [{
 					label: '',
 					data: [
-                        962363,
+						962363,
 						723543,
 						552222,
 						481201,
 						481696,
-444996
+						444996,
+						445546
 					],
 					backgroundColor: window.chartColors.yellow,
 					borderColor: window.chartColors.yellow,
 					fill: false,
 					pointHitRadius: 20,
-                }
-            ]
+				}]
 			},
 			options: {
 				responsive: true,
@@ -78,10 +79,11 @@
 			}
 		};
 
-		window.onload = function() {
+		window.onload = function () {
 			var ctx = document.getElementById('canvas').getContext('2d');
 			window.myLine = new Chart(ctx, config);
 		};
 	</script>
 </body>
+
 </html>
